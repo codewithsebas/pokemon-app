@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Application Development for Technical Test at MUTA
 
-## Getting Started
+This project consists in the development of a Frontend web application following the specifications provided by MUTA.
 
-First, run the development server:
+The application is based on the [Pokémon API](https://pokeapi.co/) and has several special functions, each with specific functionalities that ensure an intuitive user experience and properly handle errors and interactions.
+
+To run the project on your local machine follow the steps below, hope you like it!
+
+<img src="https://res.cloudinary.com/dovavvnjx/image/upload/v1732140196/pokemon_zbvhn1.png" alt="Preview">
+
+## First steps
+
+## Clone repository
+
+Clone the repository and follow the steps below:
+
+```bash
+https://github.com/codewithsebas/pokemon-app
+```
+
+## Configure your local project
+
+Create a `.env.local` file and define the environment variables.
+`.env.local`
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=https://pokeapi.co/api/v2
+```
+
+## Install project dependencies
+
+Execute the following command
+
+```bash
+npm install
+```
+
+## You can now run the project
+
+By executing the following commands
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## To run the tests run the following command
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+By executing the following commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run test
+```
 
-## Learn More
+And now open [http://localhost:3000](http://localhost:3000) and you can use the App.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project makes use of modern technologies and tools that ensure an efficient development and a high quality final result, following the best practices of frontend development.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+React Documentation: [https://react.dev/reference/react](https://react.dev/reference/react)
 
-## Deploy on Vercel
+Jestjs io : [https://jestjs.io/](https://jestjs.io/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Nextjs Documentation:[https://nextjs.org/docs](https://nextjs.org/docs)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tailwindcss Documentation: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+
+Lucide icons: [https://lucide.dev/guide/](https://lucide.dev/guide/)
+
+PokéAPI : [https://pokeapi.co/](https://pokeapi.co/)
+
+Axios : [https://axios-http.com/es/docs/intro](https://axios-http.com/es/docs/intro)

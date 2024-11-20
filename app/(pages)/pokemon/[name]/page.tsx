@@ -1,11 +1,12 @@
 import BackButton from "@/app/components/BackButton";
 import { fetchPokemonDetails } from "@/app/services/pokeApi";
-import { PokemonDetails, PokemonProps } from "@/app/types";
+import { PokemonDetails } from "@/app/types";
 import { Ban } from "lucide-react";
 import Image from "next/image";
 
-export default async function Pokemon({ params }: PokemonProps) {
-    const { name } = params;
+
+export default async function Pokemon({params}: {params: Promise<{ name: string }>})  {
+    const name = (await params).name
 
     let pokemonDetails: PokemonDetails | null = null;
     let error: string | null = null;
@@ -50,7 +51,9 @@ export default async function Pokemon({ params }: PokemonProps) {
                     <div className="w-full flex flex-col justify-between gap-5">
                         <header className="text-gray-600">
                             <h1 className="font-bold text-2xl capitalize">{name}</h1>
-                            <p className="font-light text-sm">Detalle de tu Pokémon <b>{name}.</b></p>
+                            <p className="font-light text-sm">
+                                Detalle de tu Pokémon <b>{name}.</b>
+                            </p>
                         </header>
                         <section className="text-gray-600 flex flex-col gap-6 items-start">
                             <div className="flex flex-col gap-2 w-full">
