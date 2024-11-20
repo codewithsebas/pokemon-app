@@ -5,7 +5,7 @@ import { Ban } from "lucide-react";
 import Image from "next/image";
 
 
-export default async function Pokemon({params}: {params: Promise<{ name: string }>})  {
+export default async function Pokemon({ params }: { params: Promise<{ name: string }> }) {
     const name = (await params).name
 
     let pokemonDetails: PokemonDetails | null = null;
@@ -44,10 +44,12 @@ export default async function Pokemon({params}: {params: Promise<{ name: string 
     const imageUrl = sprites.front_default;
 
     return (
-        <main className="flex items-center justify-center bg-c-blue min-h-screen p-5">
+        <main className="flex items-center justify-center max-h-screen relative overflow-hidden bg-c-blue min-h-screen p-5">
+            <Image src="/pokeball.svg" alt='Pokeball' width={100} height={100} className='absolute -bottom-20 rotate-45 -left-20 w-80 h-80 opacity-40 px-5' />
             <article className="w-full max-w-xl p-5 rounded-xl flex flex-col gap-2 bg-white relative group">
+                
                 <BackButton title="Volver" link="/" />
-                <div className="flex flex-col-reverse justify-between items-center sm:flex-row sm:items-start">
+                <div className="flex flex-col-reverse justify-between items-center relative sm:flex-row sm:items-start">
                     <div className="w-full flex flex-col justify-between gap-5">
                         <header className="text-gray-600">
                             <h1 className="font-bold text-2xl capitalize">{name}</h1>
@@ -73,7 +75,7 @@ export default async function Pokemon({params}: {params: Promise<{ name: string 
                                     {types.map((type) => (
                                         <li
                                             key={type.type.name}
-                                            className="px-4 py-1 capitalize text-xs text-center rounded-full text-gray-600 font-semibold bg-c-green"
+                                            className="px-4 py-1 capitalize text-xs text-center rounded-full text-gray-600 font-semibold bg-c-pink/50"
                                         >
                                             {type.type.name}
                                         </li>
@@ -92,6 +94,7 @@ export default async function Pokemon({params}: {params: Promise<{ name: string 
                         />
                     </div>
                 </div>
+                
             </article>
         </main>
     );

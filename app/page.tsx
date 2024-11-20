@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <main className={`flex items-start justify-center bg-c-blue min-h-screen ${error && 'bg-red-400'}`}>
-      <article className="w-full max-w-2xl min-w-2xl p-3 flex flex-col gap-3 min-h-screen duration-200">
+      <article className="w-full max-w-2xl min-w-2xl p-5 flex flex-col gap-3 min-h-screen duration-200">
         <header className="text-white">
           <h1 className="font-bold text-2xl mt-3">Pokémon App - API</h1>
           <p className="font-light">Encuentra tu Pokémon favorito y descubre más detalles sobre él.</p>

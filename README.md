@@ -6,6 +6,10 @@ The application is based on the [Pokémon API](https://pokeapi.co/) and has seve
 
 To run the project on your local machine follow the steps below, hope you like it!
 
+### Deployment
+
+Link Deploy: [https://pokemon-app-4hko.vercel.app/](https://pokemon-app-4hko.vercel.app/)
+
 <img src="https://res.cloudinary.com/dovavvnjx/image/upload/v1732140196/pokemon_zbvhn1.png" alt="Preview">
 
 ## First steps
